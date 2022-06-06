@@ -1,0 +1,72 @@
+/* #bottomTwo{
+  display: flex;
+} */
+
+.orderType{
+  flex-direction: row;
+  display: inline-block;
+}
+
+.sub{
+  display: flex;
+  justify-content: center;
+  line-height: 1.5rem;
+}
+
+#sizes{
+  font-size: 2rem;
+  line-height: 3rem;
+  margin: 0;
+}
+button{
+  line-height: 2rem;
+}
+
+select{
+  /* display: block; */
+  text-align: center;
+}
+
+h3{
+  margin-right: 0;
+  margin-top: 0;
+}
+body{
+  padding-top: 80px;
+  word-wrap: break-word;
+  background-image: url(/public/img/bsas.jpg);
+  background-size: contain;
+}
+img{
+  max-height: 300px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.jumbotron{
+  background-size: cover;
+  background-color: lightgreen;
+  
+}
+#title{
+  color: #13585C;
+}
+
+/* #loginSignUp{
+  color: #13585C;
+  
+} */
+
+.CashierContainer{
+  text-align: center;
+}
+
+#loginSignUpBaristas{
+  color: #13585C;
+  font-size: 30px;
+  font-weight: bold;
+}
+.loginButton, .signUpButton{
+  background-color: turquoise;
+}

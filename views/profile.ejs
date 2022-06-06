@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<!-- links to all the files main css, bootstrap etc -->
+<head>
+  <title>Mate Lounge</title>
+  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1><span class="fa fa-blender"></span>
+        Orders Available Below</h1>
+        <!-- logout link -->
+        <a id="button" href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+      <h2>Pending Orders</h2>
+        <p id="pending">Click on Mug to Update Order's Status</p>
+        <ul class="messages">
+          <% for(let i=0; i< orders.length; i++) {%>
+          <section id="<%=orders[i]._id%>">
+          <li class="message">
+            <span><%= orders[i].name%></span>
+            <span><%= orders[i].size %></span>
+            <span><%= orders[i].order %></span>
+            <span><%= orders[i].status %></span>
+            <span><%= orders[i].barista %></span>
+            <% if(orders[i].status !== 'is ready for pick-up'){%>
+            <span><i class="fas fa-mug-hot" aria-hidden="true"></i></span>
+            <% } %>
+            <!-- <span><i class="fa fa-trash" aria-hidden="true"></i></span> -->
+          </li>
+          <% } %>
+          </section>
+        </ul>
+        <% if (user.local.email) { %>
+      </div>
+      <% } %>
+    </div>
+
+    <div class="col-sm-6">
+      <h2>Finished Orders</h2>
+      <span>Click Here To Clear Finished Orders<i class="fa fa-trash" aria-hidden="true"></i></span>
+      <% for (let i = 0; i < done.length; i++) {%>
+        <section id="<%=done[i]._id%>">
+          <span id="orNu">Order Number:<%=i+1%></span>
+          <p><%=done[i].barista%> completed <%=done[i].name%>'s order</p>
+          <span><%=done[i].name%>:</span>
+          <span><%=done[i].size%>,</span>
+          <span><%=done[i].order%></span>
+          <span><%=done[i].status%>.</span>
+          <span>Thanks <%=done[i].barista%>!</span><br><br>
+
+          <!-- <span><i class="fa-solid fa-circle-check"></i></span> -->
+        </section>
+      <%}%>
+    </div>
+
+
+
+    <script type="text/javascript" src="speech.js"></script>
+    <script src="https://kit.fontawesome.com/077191d827.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Mate Lounge</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Leckerli+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1 id="title">Mate Cafe & Lounge</h1>
+      <section id="barista">
+        <span id="loginSignUp"> Baristas:</span>
+        <button class="loginButton"> <a href="/login"> Log In </a> </button>
+        <button class="signUpButton"> <a href="/signup"> Sign Up </a> </button>
+      </section>
+      <!-- </section> -->
+      <div class="CashierTitle">
+        <p id="cashier">Cashiers, Please Input Order:</p>
+      </div>
+      <section id="bottomTwo">
+        <section id="cashierSec">
+          <form class="CashierTitle" action="/orders" method="POST">
+            <div class="sub">
+              <input type="text" placeholder="Customer Name" name="cName"><br>
+              <button type="submit">Submit</button>
+
+            </div>
+            <div class="orderType">
+              <label for="espresso">Matcha Latte</label>
+              <input type="radio" value="Matcha Latte" name="order"><br>
+              <label for="style">Peach Iced Tea</label>
+              <input type="radio" value="Peach Iced Tea" name="order"><br>
+              <label for="cream">Strawberry Lemonade</label>
+              <input type="radio" value="Strawberry Lemonade" name="order"><br>
+              <label for="milk">Seltzer Water</label>
+              <input type="radio" value="Seltzer Water" name="order"><br>
+              <label for="espresso">Iced White Mocha</label>
+              <input type="radio" value="Iced White Mocha" name="order"><br>
+              <label for="style">Hot Latte</label>
+              <input type="radio" value="Hot Latte" name="order"><br>
+              <label for="cream">Hot Caramel Macchiato</label>
+              <input type="radio" value="Hot Caramel Macchiato" name="order"><br>
+              <label for="milk">Hot Mocha</label>
+              <input type="radio" value="Hot Mocha" name="order"><br>
+            </div>
+            <p id="sizes">Size:</p>
+            <select class="Size" id="size" name="size" placeholder="size">
+              <option value="none" selected disabled hidden></option>
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+            </select><br>
+        </section>
+        </form>
+    </div>
+  </div>
+</body>
+
+</html>

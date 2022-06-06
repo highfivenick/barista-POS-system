@@ -1,0 +1,24 @@
+p{
+  margin: 0;
+}
+section{
+  margin-top: 10px;
+}
+#orNu{
+  font-weight: bold;
+}
+/* section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+} */
+
+#button{
+  border: 1px solid black;
+  border-radius: 10%;
+  text-decoration: none;
+  color: black;
+  background-color: lightgray;
+  padding: 0.2%;
+}
+
